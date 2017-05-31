@@ -844,6 +844,12 @@ namespace tesseract {
     return returnCode == 0 && self.recognized;
 }
 
+- (void) doSetImage:(UIImage *) image
+ {
+   [self setImage:image];
+ }
+ 
+
 - (UIImage *)thresholdedImage
 {
     if (!self.isEngineConfigured) {

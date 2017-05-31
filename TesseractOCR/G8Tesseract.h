@@ -428,4 +428,6 @@ extern NSInteger const kG8MaxCredibleResolution;
  */
 - (BOOL)recognize;
 
+- (void) doSetImage:(UIImage *) image;
+
 @end
