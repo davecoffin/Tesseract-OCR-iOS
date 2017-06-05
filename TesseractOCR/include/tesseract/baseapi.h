@@ -757,7 +757,7 @@ class TESS_API TessBaseAPI {
 
   Tesseract* tesseract() const { return tesseract_; }
 
-  OcrEngineMode oem() const { return OEM_LSTM_ONLY; }
+  OcrEngineMode oem() const { return last_oem_requested_; }
 
   void InitTruthCallback(TruthCallback *cb) { truth_cb_ = cb; }
 
