@@ -235,7 +235,7 @@ class TESS_API TessBaseAPI {
     return Init(datapath, language, oem, NULL, 0, NULL, NULL, false);
   }
   int Init(const char* datapath, const char* language) {
-    return Init(datapath, language, OEM_DEFAULT, NULL, 0, NULL, NULL, false);
+    return Init(datapath, language, OEM_LSTM_ONLY, NULL, 0, NULL, NULL, false);
   }
 
   /**
@@ -757,7 +757,7 @@ class TESS_API TessBaseAPI {
 
   Tesseract* tesseract() const { return tesseract_; }
 
-  OcrEngineMode oem() const { return last_oem_requested_; }
+  OcrEngineMode oem() const { return OEM_LSTM_ONLY; }
 
   void InitTruthCallback(TruthCallback *cb) { truth_cb_ = cb; }
 
